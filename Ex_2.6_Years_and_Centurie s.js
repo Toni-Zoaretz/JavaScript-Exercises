@@ -1,20 +1,20 @@
-// The first century spans from the year 1 up to and including the year 100, The second - from the
-// year 101 up to and including the year 200, etc.
-// Task :
-// Given a year, return the century it is in.
-// Input , Output Examples ::
-// centuryFromYear(1705) returns (18)
-// centuryFromYear( 1900) returns (19)
-// centuryFromYear(1601) returns (17)
-// centuryFromYear(2000) returns (20)
-
 function century(num) {
   if (num >= 1 && num <= 100) {
-    return "We are in century" + " " + 1;
-  } if (num) 
-  
- 
-    
+    return 1;
+  }
+  if (num % 100 === 0 && num <= 900) {
+    return num / 100;
+  } else if (!num % 100 === 0 && num <= 900) {
+    return Math.round(num / 100) + 1;
+  }
+  if (num >= 901 && num <= 1000) {
+    return 10;
+  }
+  if (num % 1000 === 0) {
+    return num / 100;
+  } else if (!num % 1000 === 0) {
+    return Math.round(num / 100) + 1;
+  }
 }
 
-console.log(century(2));
+console.log(century(100));
