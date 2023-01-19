@@ -1,8 +1,12 @@
-function nb_year(p0, precent, aug, p) {
-  timerGrowth = 1;
-  p0 = 1000;
-  precent = precent / 100;
-  aug = 50;
-}
+// function nb_year(p0, precent, aug, p) {
+//   precent = precent / 100;
+//   let result = p0;
+//   let i = 1;
+//   for (i = 1; result <= p; i++) {
+//     result += p0 + precent * p0 + aug;
+//     p0 = result;
+//   }
+//   return i;
+// }
 
-console.log(1000, 2, 50, 1070);
+// console.log(nb_year(1000, 2, 50, 1070));
