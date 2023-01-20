@@ -1,29 +1,19 @@
 // toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
 // toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior
 
-// function convertDashCamel(str) {
-// let result = "";
-
 function dashToUpper(str) {
+  let result = "";
   for (let i = 0; i < str.length; i++) {
-    let result = "";
     if (
-      !(str.charAt(i) >= "A" && str.charAt(i) <= "Z") ||
-      (str.charAt(i) >= "a" && str.charAt(i) <= "z")
+      (str.charAt(i) < "a" || str.charAt(i) > "z") &&
+      (str.charAt(i) < "A" || str.charAt(i) > "Z")
     ) {
-      str.charAt(i).toUpperCase();
+      result = str.replace(str.charAt(i + 1), str.charAt(i + 1).toUpperCase());
     }
-    result += str.charAt(i);
   }
-
   return result;
 }
-
 console.log(dashToUpper("the-stealth-warrior"));
-
-// }
-
-// console.log(convertDashCamel("the-stealth-warrior"));
 
 // function isLetter(str) {
 //   return str.length === 1 && str.match(/[a-z]/i);
