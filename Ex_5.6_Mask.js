@@ -1,26 +1,14 @@
-// Usually when you buy something, you're asked whether your credit card number, phone number
-// or answer to your most secret question is still correct. However, since someone could look over
-// your shoulder, you don't want that shown on your screen. Instead, we mask it.
-// Your task is to write a function maskify, which changes all but the last four characters into '#'.
-// Examples
-// maskify("4556364607935616") == "############5616"
-// maskify( "64607935616") == "#######5616"
-// maskify( "1") == "1"
-// maskify( "") == ""
-// // "What was the name of your first pet?"
-// maskify("Skippy") == "##ippy"
-// maskify("Nananananananananananananananana Batman!") ==
-// "####################################man!
+// function maskify(str) {
+//   let result = "";
+//   let result2 = str.slice(-4);
+//   let result3 = str.slice(0, str.length - 4);
+//   for (let i = 0; i < result3.length; i++) {
+//     result += result3.charAt(i).replaceAll(result3.charAt(i), "#");
+//   }
+//   if (str.length > 4) {
+//     return result + result2;
+//   }
+//   return str;
+// }
 
-function maskify(str) {
-  let result = "";
-  for (let i = 0; i < str.length; i++) {
-    if (str.length > 4) {
-        result = 
-    }
-  }
-
-  return result;
-}
-
-console.log(maskify("trew4"));
+// console.log(maskify("4556364607935616"));
