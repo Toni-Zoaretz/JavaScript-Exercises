@@ -1,17 +1,29 @@
-// Complete the method/function so that it converts dash/underscore delimited words into camel
-// casing. The first word within the output should be capitalized only if the original word was
-// capitalized (known as Upper Camel Case, also often referred to as Pascal case).
-// Examples
 // toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
 // toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior
 
-function convertDashCamel(str) {
-  let result = "";
-  const arr = str.split('');
-  for(let i = 0; i < arr.length; i++)
+// function convertDashCamel(str) {
+// let result = "";
+
+function dashToUpper(str) {
+  for (let i = 0; i < str.length; i++) {
+    let result = "";
+    if (
+      !(str.charAt(i) >= "A" && str.charAt(i) <= "Z") ||
+      (str.charAt(i) >= "a" && str.charAt(i) <= "z")
+    ) {
+      str.charAt(i).toUpperCase();
+    }
+    result += str.charAt(i);
+  }
+
+  return result;
 }
 
-console.log(convertDashCamel("the-stealth-warrior"));
+console.log(dashToUpper("the-stealth-warrior"));
+
+// }
+
+// console.log(convertDashCamel("the-stealth-warrior"));
 
 // function isLetter(str) {
 //   return str.length === 1 && str.match(/[a-z]/i);
@@ -21,11 +33,11 @@ console.log(convertDashCamel("the-stealth-warrior"));
 // const split1 = test.split("");
 // console.log(split1.length);
 
-function ax(str) {
-  if ((str >= "A" && str <= "Z") || (str >= "a" && str <= "z")) {
-    return true;
-  }
-  return false;
-}
+// function ax(str) {
+//   if ((str >= "A" && str <= "Z") || (str >= "a" && str <= "z")) {
+//     return true;
+//   }
+//   return false;
+// }
 
-console.log(ax("/"));
+// console.log(ax("/"));
