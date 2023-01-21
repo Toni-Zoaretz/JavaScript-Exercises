@@ -1,11 +1,10 @@
-// // ("aabBcde") => a:2 b:2
+// ("aabBcde") => a:2 b:2
 
-// function countDuplicat(str) {
-//   let result = "";
-//   // let count = 0;
-//   for (let i = 0; i < str.length; i++) {}
+function countDuplicat(str) {
+  let result = 0;
+  for (let i = 0; i < str.length; i++) {
+    let letter = str[i];
+  }
+}
 
-//   return result;
-// }
-
-// console.log(countDuplicat("aabBcde"));
+console.log(countDuplicat("aabBcde"));
