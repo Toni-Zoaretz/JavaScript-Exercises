@@ -1,17 +1,10 @@
 // ("abcd") => "A-Bbb-Ccc-Dddd";
-// ("RqaEzty") => "R-Qq-Aaa-Eeee-Yyyyy";
-// ("cwAt") => "C-Ww-Aaa-Tttt";
 
 function accum(str) {
   let result1 = "";
   let result2 = "";
-  for (let i = 0; i < str.length; i++) {
-    result1 += str.charAt(i).toUpperCase() + "-";
-  }
-
-  let count = 1;
-  for (let i = 0; i < result1.length; i++) {
-    result1 += result1.charAt(i).repeat(str.length);
+  for (let i = 1; i < str.length; i++) {
+    result1 += "-" + str.charAt(i).repeat(i + 1);
   }
 
   return result1;
