@@ -8,4 +8,4 @@ function nb_year(p0, precent, aug, p) {
   return count;
 }
 
-console.log(nb_year(1500, 5, 100, 5000)); //1070
+console.log(nb_year(1500, 5, 100, 5000));

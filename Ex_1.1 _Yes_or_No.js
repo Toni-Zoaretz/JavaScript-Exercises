@@ -1,9 +1,9 @@
-// function boolValue(bool) {
-//   if (bool === true) {
-//     return "Yes";
-//   } else {
-//     return "No";
-//   }
-// }
+function boolValue(bool) {
+  if (bool === true) {
+    return "Yes";
+  } else {
+    return "No";
+  }
+}
 
-// console.log(boolValue(true));
+console.log(boolValue(true));
