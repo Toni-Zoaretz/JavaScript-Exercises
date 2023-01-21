@@ -52,10 +52,11 @@ const obj1 = {
 // ------------Filter-----------
 //------Filter all the Numbers from the Object:
 // function onlyNumbers(obj) {
-//   let result = "";
-//   for (let num of Object.keys(obj)) {
-//     if (typeof obj[key] === "number") {
-//       result += obj[key];
+//   let result = [];
+//   let keyArr = Object.values(obj);
+//   for (let i = 0; i < keyArr.length; i++) {
+//     if (typeof keyArr[i] === "number") {
+//       result.push(keyArr[i]);
 //     }
 //   }
 //   return result;
@@ -66,20 +67,26 @@ const obj1 = {
 // ------------ForEach------------------------------
 //------Return only first and last name:
 // function firstAndLast(obj) {
-//   // let firstLast = "";
-//   for (let name of Object.keys(obj)) {
-//     return Object.keys[firstName] + Object.keys[lastName];
+//   let keyArr = Object.keys(obj);
+//   let fullName = [];
+//   for (let i = 0; i < keyArr.length; i++) {
+//     if (keyArr[i] === "lastName" || keyArr[i] === "firstName") {
+//       fullName.push(obj[keyArr[i]]);
+//     }
 //   }
+//   return fullName;
 // }
 
 // console.log(firstAndLast(obj1));
 
 // ------------Map------------------------------
 //------Return all value with capital letters:
+
 // function allCapital(obj) {
-//   let result = {};
-//   for (let capital of Object.keys(obj)) {
-//     result += Object.keys[key].toUpperCasr();
-//   }
+//   let resultToUpper = [];
+//   let valurArr = Object.values(obj);
+//   let valuSt = valurArr.join(" ").toUpperCase();
+//   return valuSt.split(" ");
 // }
+
 // console.log(allCapital(obj1));

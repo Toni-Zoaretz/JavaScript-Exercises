@@ -1,10 +1,10 @@
 // function isogram(str) {
 //   for (let i = 0; i < str.length; i++) {
-//     if (str.charAt(i).repeat(2)) {
+//     if (str.indexOf(str.charAt(i)) !== i) {
 //       return false;
 //     }
-//     return true;
 //   }
+//   return true;
 // }
+
 // console.log(isogram("Dermatoglyphics"));
-// // console.log(isogram("aba"));
